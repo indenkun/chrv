@@ -46,7 +46,7 @@ df <- data.frame(sex = sample(c("M", "F"), 10, replace = TRUE),
                  check.names = TRUE)
 ```
 
-### `{BMI_cal()}`
+### `BMI_cal()`
 
 身長と体重の値からBMIを計算する。値をそのまま入力またはベクトルで入力しても、データを指定し、列名または列番号で指定しても計算できる。
 
@@ -57,7 +57,7 @@ BMI_cal(height = df$height, weight = df$weight, h.unit = "cm")
 BMI_cal(height = "height", weight = "weight", data = df, h.unit = "cm")
 BMI_cal(height = 3, weight = 4, data = df, h.unit = "cm")
 ```
-### `{weight_cal()}`
+### `weight_cal()`
 
 身長とBMIから体重を計算する。
 
@@ -67,7 +67,7 @@ weight_cal(height = "height", BMI = 22, data = df, h.unit = "cm")
 ```
 
 
-### `{eGFR_cal()}`
+### `eGFR_cal()`
 
 血清クレアチニン値か血清シスタチンC値と年齢、性別からeGFR（日本人）を計算する。
 
@@ -80,7 +80,7 @@ eGFR_cal(value = df$Cys.C, age = df$age, sex = df$sex, male = "M", female = "F",
 eGFR_cal(value = "Cys.C", age = "age", sex = "sex", data = df, male = "M", female = "F", v.type = "Cys-C")
 ```
 
-### `{UCrV_24h_cal()}`
+### `UCrV_24h_cal()`
 
 年齢、体重、身長から田中の式を用いて推定24時間尿中クレアチニン排泄量を計算する。
 
@@ -89,7 +89,7 @@ UCrV_24h_cal(age = df$age, weight = df$weight, height = df$height, h.unit = "cm"
 UCrV_24h_cal(age = "age", weight = "weight", height = "height", data = df, h.unit = "cm")
 ```
 
-### `{UNaV_24h_cal()}`
+### `UNaV_24h_cal()`
 
 随時尿クレアチニン排泄量、随時尿ナトリウム排泄量、年齢、体重、身長から田中の式を用いて推定24時間尿中ナトリウム排泄量を計算する。
 
@@ -97,7 +97,7 @@ UCrV_24h_cal(age = "age", weight = "weight", height = "height", data = df, h.uni
 UNaV_24h_cal(SUNa = df$SUNa, SUCr = df$SUCr, age = df$age, weight = df$weight, height = df$height, h.unit = "cm")
 UNaV_24h_cal(SUNa = "SUNa", SUCr = "SUCr", age = "age", weight = "weight", height = "height", data = df, h.unit = "cm")
 ```
-### `{salt_24h_cal()}`
+### `salt_24h_cal()`
 
 随時尿クレアチニン排泄量、随時尿ナトリウム排泄量、年齢、体重、身長から田中の式を用いて推定24時間尿中ナトリウム排泄量を計算し、そこから推定24時間塩分摂取量を計算する。
 
@@ -106,7 +106,7 @@ salt_24h_cal(SUNa = df$SUNa, SUCr = df$SUCr, age = df$age, weight = df$weight, h
 salt_24h_cal(SUNa = "SUNa", SUCr = "SUCr", age = "age", weight = "weight", height = "height", data = df, h.unit = "cm")
 ```
 
-### `{KtV_cal()}`
+### `KtV_cal()`
 
 Daugirdasの式を用いてvariable-volume single-pool (VVSP) Kt/Vを計算する。
 

@@ -34,7 +34,7 @@ df <- data.frame(sex = sample(c("M", "F"), 10, replace = TRUE),
                  check.names = TRUE)
 ```
 
-### `{BMI_cal()}`
+### `BMI_cal()`
 
 身長と体重の値からBMIを計算する。値をそのまま入力またはベクトルで入力しても、データを指定し、列名または列番号で指定しても計算できる。
 
@@ -49,7 +49,7 @@ BMI_cal(height = 3, weight = 4, data = df, h.unit = "cm")
 #>  [1] 17.1 22.9 25.2 19.1 25.1 24.3 21.8 25.2 24.7 24.5
 ```
 
-### `{weight_cal()}`
+### `weight_cal()`
 
 身長とBMIから体重を計算する。
 
@@ -60,7 +60,7 @@ weight_cal(height = "height", BMI = 22, data = df, h.unit = "cm")
 #>  [1] 66.5 61.7 53.0 62.5 58.2 56.1 59.1 56.2 57.3 57.7
 ```
 
-### `{eGFR_cal()}`
+### `eGFR_cal()`
 
 血清クレアチニン値か血清シスタチンC値と年齢、性別からeGFR（日本人）を計算する。
 
@@ -77,7 +77,7 @@ eGFR_cal(value = "Cys.C", age = "age", sex = "sex", data = df, male = "M", femal
 #>  [1] 26.7 46.2 63.4 73.2 58.4 50.1 54.5 54.5 68.9 59.4
 ```
 
-### `{UCrV_24h_cal()}`
+### `UCrV_24h_cal()`
 
 年齢、体重、身長から田中の式を用いて推定24時間尿中クレアチニン排泄量を計算する。
 
@@ -90,7 +90,7 @@ UCrV_24h_cal(age = "age", weight = "weight", height = "height", data = df, h.uni
 #>  [9] 1235.822 1253.705
 ```
 
-### `{UNaV_24h_cal()}`
+### `UNaV_24h_cal()`
 
 随時尿クレアチニン排泄量、随時尿ナトリウム排泄量、年齢、体重、身長から田中の式を用いて推定24時間尿中ナトリウム排泄量を計算する。
 
@@ -103,7 +103,7 @@ UNaV_24h_cal(SUNa = "SUNa", SUCr = "SUCr", age = "age", weight = "weight", heigh
 #>  [9] 141.1765 141.2754
 ```
 
-### `{salt_24h_cal()}`
+### `salt_24h_cal()`
 
 随時尿クレアチニン排泄量、随時尿ナトリウム排泄量、年齢、体重、身長から田中の式を用いて推定24時間尿中ナトリウム排泄量を計算し、そこから推定24時間塩分摂取量を計算する。
 
@@ -116,7 +116,7 @@ salt_24h_cal(SUNa = "SUNa", SUCr = "SUCr", age = "age", weight = "weight", heigh
 #>  [8]  7.659697  8.304498  8.310321
 ```
 
-### `{KtV_cal()}`
+### `KtV_cal()`
 
 Daugirdasの式を用いてvariable-volume single-pool (VVSP) Kt/Vを計算する。
 
